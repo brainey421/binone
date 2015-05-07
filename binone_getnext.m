@@ -16,7 +16,7 @@ if binone_hasnext(iterator)
     for jj=1:iterator.m
         rem = mod(div, 2^iterator.n-1);
         div = floor(div/(2^iterator.n-1));
-        A(:, jj) = iterator.cols(:, rem+1);
+        A(:, iterator.m-jj+1) = iterator.cols(:, rem+1);
     end
     iterator.ii = iterator.ii + 1;
 end
